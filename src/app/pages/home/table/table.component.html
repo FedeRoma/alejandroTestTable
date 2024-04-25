@@ -1,0 +1,30 @@
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th [width]="'10%'">Position</th>
+        <th [width]="'35%'">Name</th>
+        <th [width]="'35%'">Weight</th>
+        <th [width]="'10%'">Symbol</th>
+        <th [width]="'10%'"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of elements">
+        <td>{{ element.position }}</td>
+        <td>{{ element.name }}</td>
+        <td>{{ element.weight }}</td>
+        <td>{{ element.symbol }}</td>
+        <td>
+          <button
+            mat-icon-button
+            aria-label="Click to view more details"
+            (click)="elementClick.emit(element)"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="topnav">
+  <app-header (toggleSidenav)="toggleSidenav($event)"></app-header>
+
+  <mat-sidenav-container>
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      class="sidenav"
+      [opened]="opened"
+      [style.width]="'12rem'"
+    >
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

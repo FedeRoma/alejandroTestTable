@@ -1,0 +1,21 @@
+.sidebar-header{
+    text-align: center;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid #5d5555;
+    
+    .avatar{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #FFF;
+        margin: auto;
+    }
+    .header-text{
+        >h2{
+            margin: 0.5rem;
+        }
+    }
+}
+.navlist{
+    padding-top: 0;
+}

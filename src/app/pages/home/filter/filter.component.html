@@ -1,0 +1,11 @@
+<form class="input-filter">
+  <mat-form-field class="full-width">
+    <mat-label>Search element by name</mat-label>
+    <input
+      matInput
+      [formControl]="inputText"
+      (ngModelChange)="changeSearchInput()"
+      placeholder="Search element by name"
+    />
+  </mat-form-field>
+</form>

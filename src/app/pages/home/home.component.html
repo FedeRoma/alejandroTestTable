@@ -1,0 +1,18 @@
+<h1>Alejandro Tabla Test</h1>
+<div class="container">
+  <div class="row">
+    <app-filter
+      [text]="searchInput"
+      (textChange)="changeSearchInput($event)"
+    ></app-filter>
+
+    <div class="errorText" *ngIf="searchNoResults">
+      <p>No hay elementos para la búsqueda</p>
+    </div>
+  </div>
+
+  <app-table
+    [elements]="filteredElements"
+    (elementClick)="elementClick($event)"
+  ></app-table>
+</div>

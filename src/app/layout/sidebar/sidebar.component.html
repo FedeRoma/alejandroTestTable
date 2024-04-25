@@ -1,0 +1,14 @@
+<mat-nav-list class="navlist">
+  <a
+    *ngFor="let item of menuItems()"
+    mat-list-item
+    class="navmenu-list"
+    matTooltipPosition="right"
+    [routerLink]="item.route"
+    [matTooltip]="label ? item.name : ''"
+    (click)="label = !label"
+  >
+    <mat-icon matListItemIcon class="menuicon">{{ item.icon }}</mat-icon>
+    <span>{{ item.name }}</span>
+  </a>
+</mat-nav-list>
